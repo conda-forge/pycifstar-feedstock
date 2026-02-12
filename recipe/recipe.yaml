@@ -12,13 +12,13 @@ source:
   sha256: 5892fdf16c83372ee5f32557127d5f36e14b0bbe520883a4e2e70365382f70ed
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
@@ -28,7 +28,7 @@ tests:
   - script: python -c "import pycifstar"
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
   summary: PyCifStar is a class library for data manipulation provided in the CIF/STAR File.
