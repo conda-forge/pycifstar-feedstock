@@ -1,6 +1,6 @@
 context:
   name: pycifstar
-  version: 0.3.0
+  version: "0.3.1"
   python_min: "3.9" # https://github.com/prefix-dev/rattler-build/pull/1122
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pycifstar-${{ version }}.tar.gz
-  sha256: 5892fdf16c83372ee5f32557127d5f36e14b0bbe520883a4e2e70365382f70ed
+  sha256: f01543b19ca441be40cef9d2806eda3a43a3085477b85519df7e0c2905b5f1f8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
